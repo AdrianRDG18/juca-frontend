@@ -6,7 +6,6 @@ import { PagesRoutingModule } from './pages-routing.module';
 import { PagesComponent } from './pages.component';
 import { NoPageFoundComponent } from './no-page-found/no-page-found.component';
 
-
 @NgModule({
   declarations: [
     PagesComponent,
