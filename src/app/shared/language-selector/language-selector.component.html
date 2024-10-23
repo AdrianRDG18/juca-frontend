@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <small class="">Select your language: </small> <br>
+            <select class="form-select form-select-sm">
+                <option *ngFor="let lang of languages()">
+                    {{lang.code}} - {{lang.flag}}
+                </option>
+            </select>
+        </div>
+    </div>
+</div>
