@@ -2,8 +2,8 @@
     <div class="row">
         <div class="col-12">
             <small class="">Select your language: </small> <br>
-            <select class="form-select form-select-sm">
-                <option *ngFor="let lang of languages()">
+            <select class="form-select form-select-sm" (change)="changeLanguage($event)">
+                <option *ngFor="let lang of languages()" [value]="lang.code">
                     {{lang.code}} - {{lang.flag}}
                 </option>
             </select>
