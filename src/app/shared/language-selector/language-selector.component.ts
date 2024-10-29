@@ -8,7 +8,9 @@ import { LanguageService } from '../../services/language.service';
 })
 export class LanguageSelectorComponent {
 
-  constructor(private cookie: LanguageService){}
+  constructor(private languageService: LanguageService){}
+
+  currentLang = this.languageService.currentLang;
 
   languages = signal([
     { code: 'en', flag: '🇺🇸' },
@@ -19,7 +21,7 @@ export class LanguageSelectorComponent {
 
   changeLanguage(event: Event){
     const target = event.target as HTMLSelectElement;
-    this.cookie.changeLanguage(target.value);
+    this.languageService.changeLanguage(target.value);
   }
 
 }
