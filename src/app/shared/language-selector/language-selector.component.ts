@@ -14,9 +14,7 @@ export class LanguageSelectorComponent {
 
   languages = signal([
     { code: 'en', flag: '🇺🇸' },
-    { code: 'es', flag: '🇪🇸' },
-    { code: 'fr', flag: '🇫🇷' },
-    { code: 'it', flag: '🇮🇹' },
+    { code: 'es', flag: '🇪🇸' }
   ]);
 
   changeLanguage(event: Event){

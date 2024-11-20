@@ -1,0 +1,15 @@
+{
+    "languageSelector": {
+        "selectLanguage": "Select your language:"
+    },
+    "loginPage": {
+        "loginMessage": "Sign In",
+        "requiredEmail": "*The email is required",
+        "requiredPassword": "*The password is required",
+        "rememberMe": "Remember me",
+        "forgotPw": "Forgot password?",
+        "login": "Log In",
+        "haventAccount": "Don't have an account?",
+        "Signup": "Sign Up"
+    }
+}
