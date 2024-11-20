@@ -12,8 +12,7 @@ export class AppComponent {
   title = 'juca-frontend';
 
   constructor(private cookie: CookieService, private languageService: LanguageService){
-    console.log({ cookie: this.cookie.get('lang')});
-    const lang = this.cookie.check('lang') ? this.cookie.get('lang') : 'en';
+    const lang = this.cookie.check('lang')? this.cookie.get('lang') : 'en';
     this.languageService.changeLanguage(lang);
   }
 
