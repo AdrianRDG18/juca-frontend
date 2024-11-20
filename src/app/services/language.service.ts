@@ -7,7 +7,7 @@ import { CookieService } from 'ngx-cookie-service';
 })
 export class LanguageService {
 
-  currentLang = signal('');
+  currentLang = '';
 
   constructor(private cookie: CookieService,
               private translate: TranslateService
@@ -17,6 +17,6 @@ export class LanguageService {
     this.cookie.set('lang', lang);
     this.translate.setDefaultLang(lang);
     this.translate.use(lang);
-    this.currentLang.set(lang);
+    this.currentLang = lang;
   }
 }
