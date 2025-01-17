@@ -4,6 +4,7 @@ import { SweetAlertService } from '../../services/swal.service';
 import Swal from 'sweetalert2';
 import { AuthService } from '../../services/auth.service';
 import { CatchErrorService } from '../../services/catch-error.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +15,8 @@ export class LoginComponent {
 
   constructor(private _swal: SweetAlertService,
               private _auth: AuthService,
-              private _catchError: CatchErrorService
+              private _catchError: CatchErrorService,
+              private _router: Router
   ){}
 
   loginForm: FormGroup = new FormGroup({
@@ -34,9 +36,8 @@ export class LoginComponent {
       Swal.showLoading();
       this._auth.login(this.loginForm.value)
                 .subscribe({
-                  next: (resp: any) =>{
-                    console.log(resp);
-                  }, error: (error) =>{
+                  next: () => this._router.navigateByUrl('/dashboard')
+                    , error: (error) =>{
                     console.log(error);
                     this._catchError.scaleError('Something went wrong on login', error);
                   }, complete: () => Swal.close()
