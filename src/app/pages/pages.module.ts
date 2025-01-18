@@ -5,6 +5,7 @@ import { PagesRoutingModule } from './pages-routing.module';
 
 import { PagesComponent } from './pages.component';
 import { NoPageFoundComponent } from './no-page-found/no-page-found.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { NoPageFoundComponent } from './no-page-found/no-page-found.component';
   ],
   imports: [
     CommonModule,
-    PagesRoutingModule
+    PagesRoutingModule,
+    SharedModule
   ]
 })
 export class PagesModule { }
