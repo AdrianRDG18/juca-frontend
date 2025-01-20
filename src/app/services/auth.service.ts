@@ -15,7 +15,7 @@ export class AuthService {
   constructor(private _http: HttpClient){}
   
   get tokenHeader() : any{
-    return { headers: { 'x-token': localStorage.getItem('token') }};
+    return { headers: { 'x-token': localStorage.getItem('token') || '' }};
   }
 
   login(login_data: any): Observable<any>{
