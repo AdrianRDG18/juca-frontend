@@ -29,7 +29,6 @@ export class LoginComponent {
 
   login(){
     this.formSubmited = true;
-    console.log(this.loginForm.value);
     if(this.loginForm.valid){
       (this.loginForm.get('remember')?.value)? localStorage.setItem('email_remember', this.loginForm.get('email')?.value): localStorage.removeItem('email_remember');
       this._swal.swalProcessingRequest();
