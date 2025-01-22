@@ -1,16 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { PagesRoutingModule } from './pages-routing.module';
+import { PagesRoutingModule } from './pages-routing';
+import { SharedModule } from '../shared/shared.module';
 
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { PagesComponent } from './pages.component';
 import { NoPageFoundComponent } from './no-page-found/no-page-found.component';
-import { SharedModule } from '../shared/shared.module';
+import { UsersComponent } from './users/users.component';
 
 @NgModule({
   declarations: [
+    DashboardComponent,
     PagesComponent,
-    NoPageFoundComponent
+    NoPageFoundComponent,
+    UsersComponent,
   ],
   imports: [
     CommonModule,
