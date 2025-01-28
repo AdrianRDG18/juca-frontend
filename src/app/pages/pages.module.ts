@@ -8,6 +8,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { PagesComponent } from './pages.component';
 import { NoPageFoundComponent } from './no-page-found/no-page-found.component';
 import { UsersComponent } from './users/users.component';
+import { SettingsComponent } from './settings/settings.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { UsersComponent } from './users/users.component';
     PagesComponent,
     NoPageFoundComponent,
     UsersComponent,
+    SettingsComponent,
   ],
   imports: [
     CommonModule,
