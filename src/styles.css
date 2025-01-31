@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+
+.color1{
+    border: 2px solid green!important;
+}
+.color2{
+    border: 2px solid yellow!important;
+}
+.color3{
+    border: 2px solid blue!important;
+}
+.color4{
+    border: 2px solid red!important;
+}
+.color5{
+    border: 2px solid pink!important;
+}
