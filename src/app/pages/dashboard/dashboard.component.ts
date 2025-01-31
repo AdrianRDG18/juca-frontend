@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SettingsService } from '../../services/settings.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class DashboardComponent {
 
+  constructor(private _settingsService: SettingsService){}
 }
