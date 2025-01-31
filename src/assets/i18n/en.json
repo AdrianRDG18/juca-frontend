@@ -11,5 +11,12 @@
         "login": "Log In",
         "haventAccount": "Don't have an account?",
         "Signup": "Sign Up"
+    },
+    "settingsPage": {
+        "chooseTheme": "Choose the theme",
+        "clearSidebar": "With clear sidebar",
+        "darkSidebar": "With dark sidebar",
+        "chooseLanguage": "Choose Language for the whole app"
+
     }
 }

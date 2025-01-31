@@ -11,5 +11,11 @@
         "login": "Iniciar sesion",
         "haventAccount": "Aun no tienes una cuenta?",
         "Signup": "Registrarse"
+    },
+    "settingsPage": {
+        "chooseTheme": "Elige un tema",
+        "clearSidebar": "Con sidebar claro",
+        "darkSidebar": "Con sidebar obscuro",
+        "chooseLanguage": "Selecciona el lenguaje para toda la app"
     }
 }
