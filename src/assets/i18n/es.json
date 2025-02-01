@@ -17,5 +17,10 @@
         "clearSidebar": "Con sidebar claro",
         "darkSidebar": "Con sidebar obscuro",
         "chooseLanguage": "Selecciona el lenguaje para toda la app"
+    },
+    "headerComponent": {
+        "myProfile": "Mi perfil",
+        "accountSetting": "Configuraciones",
+        "logout": "Cerrar sesion"
     }
 }
