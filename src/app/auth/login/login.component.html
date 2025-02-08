@@ -10,12 +10,12 @@
                     <h3 class="box-title m-b-20">{{ "loginPage.loginMessage" | translate }}</h3>
                     <div class="form-group ">
                         <div class="col-xs-12">
-                            <input class="form-control" type="email" placeholder="Email" formControlName="email"></div>
+                            <input class="form-control" type="email" placeholder="{{ 'general.email' | translate }}" formControlName="email"></div>
                             <small class="text-danger" *ngIf="fieldValidation('email')">{{"loginPage.requiredEmail" | translate}}</small>
                     </div>
                     <div class="form-group">
                         <div class="col-xs-12">
-                            <input class="form-control" type="password" placeholder="Password" formControlName="password"></div>
+                            <input class="form-control" type="password" placeholder="{{ 'general.password' | translate}}" formControlName="password"></div>
                             <small class="text-danger" *ngIf="fieldValidation('password')">{{"loginPage.requiredPassword" | translate}}</small>
                     </div>
                     <div class="form-group row">

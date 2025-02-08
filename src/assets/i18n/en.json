@@ -23,5 +23,9 @@
         "accountSettings": "Account Setting",
         "logout": "Logout",
         "logoutMsg": "Are you sure to close session of this user?"
+    },
+    "general": {
+        "email": "Email",
+        "password": "Password"
     }
 }

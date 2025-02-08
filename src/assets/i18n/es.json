@@ -23,5 +23,9 @@
         "accountSettings": "Configuraciones",
         "logout": "Cerrar sesion",
         "logoutMsg": "Estas seguro de cerrar sesion de este usuario?"
+    },
+    "general": {
+        "email": "Correo electronico",
+        "password": "Contraseña"
     }
 }
