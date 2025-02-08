@@ -20,7 +20,7 @@
     },
     "headerComponent": {
         "myProfile": "Mi perfil",
-        "accountSetting": "Configuraciones",
+        "accountSettings": "Configuraciones",
         "logout": "Cerrar sesion"
     }
 }

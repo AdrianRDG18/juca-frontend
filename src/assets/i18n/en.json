@@ -20,7 +20,7 @@
     },
     "headerComponent": {
         "myProfile": "My Profile",
-        "accountSetting": "Account Setting",
+        "accountSettings": "Account Setting",
         "logout": "Logout"
     }
 }
