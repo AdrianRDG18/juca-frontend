@@ -42,7 +42,7 @@ export class SidebarComponent {
         .then( (resp) => {
           if(resp.isConfirmed){
             localStorage.removeItem('token');
-            this._router.navigateByUrl('/login');
+            this._router.navigateByUrl('/signin');
           }
         });
   }
