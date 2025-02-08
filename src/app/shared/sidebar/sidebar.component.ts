@@ -3,6 +3,7 @@ import { AuthService } from '../../services/auth.service';
 import { User } from '../../models/user.model';
 import { SweetAlertService } from '../../services/swal.service';
 import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-sidebar',
@@ -30,13 +31,14 @@ export class SidebarComponent {
 
   constructor(private _authService: AuthService,
               private _swal: SweetAlertService,
-              private _router: Router
+              private _router: Router,
+              private _translateService: TranslateService
   ){
     this.user = this._authService.user;
   }
   
   logout(){
-    this._swal.swalConfirm('Logout', 'Are you sure to close the session of this user?')
+    this._swal.swalConfirm(this._translateService.instant("headerComponent.logout"), this._translateService.instant("headerComponent.logoutMsg"))
         .then( (resp) => {
           if(resp.isConfirmed){
             localStorage.removeItem('token');

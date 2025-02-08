@@ -21,6 +21,7 @@
     "headerComponent": {
         "myProfile": "My Profile",
         "accountSettings": "Account Setting",
-        "logout": "Logout"
+        "logout": "Logout",
+        "logoutMsg": "Are you sure to close session of this user?"
     }
 }

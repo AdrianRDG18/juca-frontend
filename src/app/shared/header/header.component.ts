@@ -6,6 +6,7 @@ import Swal from 'sweetalert2';
 import { ImageService } from '../../services/image.service';
 import { CatchErrorService } from '../../services/catch-error.service';
 import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
@@ -20,7 +21,8 @@ export class HeaderComponent {
               private _swal: SweetAlertService,
               private _imageService: ImageService,
               private _catchError: CatchErrorService,
-              private _router: Router
+              private _router: Router,
+              private _translateService: TranslateService
   ){
     this.user = this._authService.user;
     this.setImage();
@@ -50,7 +52,7 @@ export class HeaderComponent {
   }
 
   logout(){
-    this._swal.swalConfirm('Logout', 'Are you sure to close the session of this user?')
+    this._swal.swalConfirm(this._translateService.instant("headerComponent.logout"), this._translateService.instant("headerComponent.logoutMsg"))
         .then( (result) => {
           if(result.isConfirmed){
             localStorage.removeItem('token');
