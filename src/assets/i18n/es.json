@@ -24,6 +24,10 @@
         "logout": "Cerrar sesion",
         "logoutMsg": "Estas seguro de cerrar sesion de este usuario?"
     },
+    "swal": {
+        "confirmButton": "Confirmar",
+        "cancelButton": "Cancelar"
+    },
     "general": {
         "email": "Correo electronico",
         "password": "Contraseña"

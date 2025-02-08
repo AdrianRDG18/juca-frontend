@@ -24,6 +24,10 @@
         "logout": "Logout",
         "logoutMsg": "Are you sure to close session of this user?"
     },
+    "swal": {
+        "confirmButton": "Confirm",
+        "cancelButton": "Cancel"
+    },
     "general": {
         "email": "Email",
         "password": "Password"
