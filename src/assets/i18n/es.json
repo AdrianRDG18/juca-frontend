@@ -18,6 +18,10 @@
         "darkSidebar": "Con sidebar obscuro",
         "chooseLanguage": "Selecciona el lenguaje para toda la app"
     },
+    "profilePage": {
+        "title": "Cambia algunos de tus datos aqui",
+        "subtitle": "Recuerda guardar tus cambios"
+    },
     "headerComponent": {
         "myProfile": "Mi perfil",
         "accountSettings": "Configuraciones",
@@ -29,7 +33,13 @@
         "cancelButton": "Cancelar"
     },
     "general": {
+        "name": "Nombre completo",
         "email": "Correo electronico",
-        "password": "Contraseña"
+        "password": "Contraseña",
+        "passwordConfirmation": "Confirmacion de contraseña",
+        "confirm": "Confirmar"
+    },
+    "routes": {
+        "profile": "Mi perfil"
     }
 }
