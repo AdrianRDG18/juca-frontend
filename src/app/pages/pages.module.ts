@@ -10,6 +10,7 @@ import { NoPageFoundComponent } from './no-page-found/no-page-found.component';
 import { UsersComponent } from './users/users.component';
 import { SettingsComponent } from './settings/settings.component';
 import { TranslateModule } from '@ngx-translate/core';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { TranslateModule } from '@ngx-translate/core';
     NoPageFoundComponent,
     UsersComponent,
     SettingsComponent,
+    ProfileComponent,
   ],
   imports: [
     CommonModule,
