@@ -26,7 +26,6 @@ export class HeaderComponent {
   ){
     this.user = this._authService.user;
     this.setImage();
-    console.log(this.user);
   }
 
   setImage(){
