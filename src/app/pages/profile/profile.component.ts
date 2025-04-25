@@ -17,10 +17,8 @@ export class ProfileComponent {
   public user?: User;
 
   public profileForm = new FormGroup({
-    full_name: new FormControl('', [Validators.required, Validators.minLength(6)]),
-    email: new FormControl('', [Validators.required, Validators.email]),
-    password: new FormControl('', [Validators.required, Validators.minLength(6)]),
-    password_conf: new FormControl('', [Validators.required, Validators.minLength(6)])
+    name: new FormControl('', [Validators.required, Validators.minLength(6)]),
+    email: new FormControl('', [Validators.required, Validators.email])
   });
 
   formSubmited: boolean = false;
@@ -32,7 +30,7 @@ export class ProfileComponent {
   ){
     this.user = this._authService.user;
     this.profileForm.patchValue({
-      full_name: this.user!.name,
+      name: this.user!.name,
       email: this.user!.email,
     });
     this.getUser();
@@ -49,6 +47,27 @@ export class ProfileComponent {
             this._catchError.scaleError('Somethin wen wrong on getUser', error);
           }, complete: () => Swal.close()
         });
+  }
+
+  getControlErrors(control_name: string, display_name: string): string[] {
+    const control = this.profileForm?.get(control_name);
+    if (control?.errors) {
+      return Object.keys(control.errors)
+                   .map( (errorKey: string) => {
+                     return this.getErrorMessage(errorKey, control.errors?.[errorKey], display_name)
+                   });
+    }
+    return [];
+  }
+
+  private getErrorMessage(errorKey: string, errorValue: any, display_name: string): string {
+    const errorMessages: { [key: string]: (errorValue: any) => string } = {
+      'required': () => `${display_name} is required.`,
+      'minlength': () => `${display_name} must be at least ${errorValue.requiredLength} characters long.`,
+      'email': () => 'Please enter a valid email address.'
+      // Add other error messages here as needed
+    };
+    return errorMessages[errorKey] ? errorMessages[errorKey](errorValue) : `Unknown error: ${errorKey}`;
   }
 
   updateUser(){
