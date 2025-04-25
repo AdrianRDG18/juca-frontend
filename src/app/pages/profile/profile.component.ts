@@ -21,8 +21,6 @@ export class ProfileComponent {
     email: new FormControl('', [Validators.required, Validators.email])
   });
 
-  formSubmited: boolean = false;
-
   constructor(private _userService: UserService,
               private _authService: AuthService,
               private _catchError: CatchErrorService,
@@ -71,10 +69,22 @@ export class ProfileComponent {
   }
 
   updateUser(){
-    console.log(this.profileForm);
-    this.formSubmited = true;
-    if(this.profileForm.valid){
-      console.log('Valida!')
+    if(this.profileForm.valid ){
+      this._swal.swalProcessingRequest();
+      Swal.showLoading();
+      this._userService.updatePersonaInfo(this.profileForm.value, this.user!.uid)
+          .subscribe({
+            next: (resp:any) => {
+              this._swal.swalSuccess('OK', resp.msg);
+              const { name, email} = resp.userUpdated;
+              this.user!.name = name;
+              this.user!.email = email;
+            },
+            error: (error) => {
+              console.log(error);
+              this._catchError.scaleError('Something was wrong in updateUser', error);
+            }
+          });
     }
   }
 

@@ -26,4 +26,8 @@ export class UserService {
                )
   }
 
+  updatePersonaInfo(user_info: any, uid: string){
+    return this._httpClient.put(this.api_base_url + '/users/' + uid, user_info, this.tokenOnHeader);
+  }
+
 }
