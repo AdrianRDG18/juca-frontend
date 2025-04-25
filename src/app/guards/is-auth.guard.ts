@@ -10,7 +10,7 @@ export const isAuthGuard: CanActivateFn = () => {
              .pipe(
               tap( (isAuthenticated) => {
                 if(!isAuthenticated){
-                  _router.navigateByUrl('/signin');  
+                  _router.navigateByUrl('/login');
                 }
               })
              );
@@ -23,7 +23,7 @@ export const canMatch: CanMatchFn = () => {
              .pipe(
               tap( (isAuthenticated) => {
                 if(!isAuthenticated){
-                  _router.navigateByUrl('/signin');  
+                  _router.navigateByUrl('/login');
                 }
               })
              );

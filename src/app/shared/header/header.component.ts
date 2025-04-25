@@ -55,7 +55,7 @@ export class HeaderComponent {
         .then( (result) => {
           if(result.isConfirmed){
             localStorage.removeItem('token');
-            this._router.navigateByUrl('/signin');
+            this._router.navigateByUrl('/login');
           }
         });
   }
