@@ -27,13 +27,13 @@
     },
     "headerComponent": {
         "myProfile": "My Profile",
-        "accountSettings": "Account Setting",
         "logout": "Logout",
         "logoutMsg": "Are you sure to close session of this user?"
     },
     "sidebar": {
         "personal-info": "Personal info",
-        "password": "Password"
+        "password": "Password",
+        "settings": "Settings"
     },
     "swal": {
         "confirmButton": "Confirm",

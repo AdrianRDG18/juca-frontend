@@ -27,13 +27,13 @@
     },
     "headerComponent": {
         "myProfile": "Mi perfil",
-        "accountSettings": "Configuraciones",
         "logout": "Cerrar sesion",
         "logoutMsg": "Estas seguro de cerrar sesion de este usuario?"
     },
     "sidebar": {
         "personal-info": "Informacion personal",
-        "password": "Contraseña"
+        "password": "Contraseña",
+        "settings": "Configuraciones"
     },
     "swal": {
         "confirmButton": "Confirmar",
