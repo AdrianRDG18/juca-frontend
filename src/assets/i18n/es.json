@@ -25,12 +25,9 @@
         "title": "Cambia algunos de tus datos aqui",
         "subtitle": "Recuerda guardar tus cambios"
     },
-    "headerComponent": {
+    "sidebar": {
         "myProfile": "Mi perfil",
         "logout": "Cerrar sesion",
-        "logoutMsg": "Estas seguro de cerrar sesion de este usuario?"
-    },
-    "sidebar": {
         "personal-info": "Informacion personal",
         "password": "Contraseña",
         "settings": "Configuraciones"

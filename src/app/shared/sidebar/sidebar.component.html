@@ -17,7 +17,7 @@
                             <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false">
                                 <i class="mdi mdi-folder-lock-open"></i>
                                 <span class="hide-menu">
-                                    {{ "headerComponent.myProfile" | translate }} <span class="label label-rouded label-themecolor pull-right text-dark">2</span>
+                                    {{ "sidebar.myProfile" | translate }} <span class="label label-rouded label-themecolor pull-right text-dark">2</span>
                                 </span>
                             </a>
                             <ul aria-expanded="false" class="collapse">
@@ -34,7 +34,7 @@
                             </ul>
                         </li>
                         <li><a routerLink="./settings" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">{{ "sidebar.settings" | translate}}</a></li>
-                        <li><a (click)="logout()" class="cursor-pointer">{{ "headerComponent.logout" | translate }}</a></li>
+                        <li><a (click)="logout()" class="cursor-pointer">{{ "sidebar.logout" | translate }}</a></li>
                     </ul>
                 </li>
                 <li class="nav-devider"></li>

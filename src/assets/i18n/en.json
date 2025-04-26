@@ -25,12 +25,9 @@
         "title": "You can change your data information",
         "subtitle": "Remember save your changes"
     },
-    "headerComponent": {
+    "sidebar": {
         "myProfile": "My Profile",
         "logout": "Logout",
-        "logoutMsg": "Are you sure to close session of this user?"
-    },
-    "sidebar": {
         "personal-info": "Personal info",
         "password": "Password",
         "settings": "Settings"
