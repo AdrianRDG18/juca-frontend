@@ -12,6 +12,9 @@
         "haventAccount": "Aun no tienes una cuenta?",
         "Signup": "Registrarse"
     },
+    "registerPage": {
+        "registerMessage": "Registro de usuarios"
+    },
     "settingsPage": {
         "chooseTheme": "Elige un tema",
         "clearSidebar": "Con sidebar claro",
