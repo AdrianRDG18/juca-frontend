@@ -4,7 +4,7 @@ import { PagesComponent } from './pages.component';
 import { canMatch, isAuthGuard } from '../guards/is-auth.guard';
 
 const routes: Routes = [
-  { path: 'dashboard',
+  { path: '',
     component: PagesComponent,
     canActivate: [ isAuthGuard ],
     canMatch: [ canMatch ],
