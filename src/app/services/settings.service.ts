@@ -7,10 +7,6 @@ export class SettingsService {
 
   public theme = document.querySelector('#theme-id') as HTMLLIElement;
 
-  constructor(){
-    this.setThemeFirstTime();
-  }
-
   /**
   * Set theme first time | set theme by definition in localStorage
   *
