@@ -31,6 +31,10 @@
         "logout": "Cerrar sesion",
         "logoutMsg": "Estas seguro de cerrar sesion de este usuario?"
     },
+    "sidebar": {
+        "personal-info": "Informacion personal",
+        "password": "Contraseña"
+    },
     "swal": {
         "confirmButton": "Confirmar",
         "cancelButton": "Cancelar"

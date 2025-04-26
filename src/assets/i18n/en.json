@@ -31,6 +31,10 @@
         "logout": "Logout",
         "logoutMsg": "Are you sure to close session of this user?"
     },
+    "sidebar": {
+        "personal-info": "Personal info",
+        "password": "Password"
+    },
     "swal": {
         "confirmButton": "Confirm",
         "cancelButton": "Cancel"

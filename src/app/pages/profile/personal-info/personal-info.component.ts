@@ -1,18 +1,18 @@
 import { Component } from '@angular/core';
-import { UserService } from '../../services/user.service';
-import { User } from '../../models/user.model';
-import { AuthService } from '../../services/auth.service';
-import { CatchErrorService } from '../../services/catch-error.service';
-import { SweetAlertService } from '../../services/swal.service';
 import Swal from 'sweetalert2';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UserService } from '../../../services/user.service';
+import { AuthService } from '../../../services/auth.service';
+import { CatchErrorService } from '../../../services/catch-error.service';
+import { SweetAlertService } from '../../../services/swal.service';
+import { User } from '../../../models/user.model';
 
 @Component({
-  selector: 'app-profile',
-  templateUrl: './profile.component.html',
+  selector: 'app-personal-info',
+  templateUrl: './personal-info.component.html',
   styles: ``
 })
-export class ProfileComponent {
+export class PersonalInfoComponent {
 
   public user?: User;
 

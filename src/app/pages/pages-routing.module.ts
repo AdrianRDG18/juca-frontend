@@ -8,6 +8,9 @@ const routes: Routes = [
     component: PagesComponent,
     canActivate: [ isAuthGuard ],
     canMatch: [ canMatch ],
+    children: [
+      { path: 'profile', loadChildren: () => import('./profile/profile.module').then( m => m.ProfileModule) }
+    ]
   }
 ];
 

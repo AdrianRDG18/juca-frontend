@@ -13,7 +13,26 @@
                         <span class="hide-menu">{{ (user?.name)? (user?.name | slice:0:18)+'...':(user?.name) }}</span>
                     </a>
                     <ul aria-expanded="false" class="collapse">
-                        <li><a routerLink="./profile" routerLinkActive="active">{{ "headerComponent.myProfile" | translate }}</a></li>
+                        <li>
+                            <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false">
+                                <i class="mdi mdi-folder-lock-open"></i>
+                                <span class="hide-menu">
+                                    {{ "headerComponent.myProfile" | translate }} <span class="label label-rouded label-themecolor pull-right text-dark">2</span>
+                                </span>
+                            </a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li>
+                                    <a routerLink="./profile/personal-info" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                       {{ "sidebar.personal-info" | translate }}
+                                    </a>
+                                </li>
+                                <li>
+                                    <a routerLink="./profile/password" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                       {{ "sidebar.password" | translate }}
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
                         <li><a routerLink="account-settings" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">{{ "headerComponent.accountSettings" | translate}}</a></li>
                         <li><a (click)="logout()" class="cursor-pointer">{{ "headerComponent.logout" | translate }}</a></li>
                     </ul>
