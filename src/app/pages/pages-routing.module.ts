@@ -4,11 +4,10 @@ import { PagesComponent } from './pages.component';
 import { canMatch, isAuthGuard } from '../guards/is-auth.guard';
 
 const routes: Routes = [
-  { path: '',
+  { path: '', // 'dasboard' route loaded from app.component
     component: PagesComponent,
     canActivate: [ isAuthGuard ],
     canMatch: [ canMatch ],
-    loadChildren: () => import('./child-pages-routes.module').then(module => module.ChildPagesRoutesModule)
   }
 ];
 
