@@ -43,6 +43,11 @@
         "passwordConfirmation": "Confirmacion de contraseña",
         "confirm": "Confirmar"
     },
+    "no-page": {
+        "page-not-found": "Pagina no encontrada",
+        "way-home": "Parece que estas buscando el camino a casa",
+        "go-back": "Ir atras"
+    },
     "routes": {
         "profile": "Mi perfil"
     }
