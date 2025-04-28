@@ -6,6 +6,7 @@ import { AuthService } from '../../../services/auth.service';
 import { CatchErrorService } from '../../../services/catch-error.service';
 import { SweetAlertService } from '../../../services/swal.service';
 import { User } from '../../../models/user.model';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-personal-info',
@@ -24,27 +25,14 @@ export class PersonalInfoComponent {
   constructor(private _userService: UserService,
               private _authService: AuthService,
               private _catchError: CatchErrorService,
-              private _swal: SweetAlertService
+              private _swal: SweetAlertService,
+              private _translateService: TranslateService
   ){
     this.user = this._authService.user;
     this.profileForm.patchValue({
       name: this.user!.name,
       email: this.user!.email,
     });
-    this.getUser();
-  }
-  
-  getUser(){
-    this._swal.swalProcessingRequest();
-    Swal.showLoading();
-    this._userService.getUserById(this.user!.uid)
-        .subscribe({
-          next: (user:User) => {
-            console.log('Resp:' + user.email);
-          }, error: (error) => {
-            this._catchError.scaleError('Somethin wen wrong on getUser', error);
-          }, complete: () => Swal.close()
-        });
   }
 
   getControlErrors(control_name: string, display_name: string): string[] {
@@ -70,21 +58,27 @@ export class PersonalInfoComponent {
 
   updateUser(){
     if(this.profileForm.valid ){
-      this._swal.swalProcessingRequest();
-      Swal.showLoading();
-      this._userService.updatePersonaInfo(this.profileForm.value, this.user!.uid)
-          .subscribe({
-            next: (resp:any) => {
-              this._swal.swalSuccess('OK', resp.msg);
-              const { name, email} = resp.userUpdated;
-              this.user!.name = name;
-              this.user!.email = email;
-            },
-            error: (error) => {
-              console.log(error);
-              this._catchError.scaleError('Something was wrong in updateUser', error);
-            }
-          });
+
+      this._swal.swalConfirm(this._translateService.instant("profilePage.updateUser"), this._translateService.instant("profilePage.confirmUpdate")).then((result) =>{
+        if(result.isConfirmed){
+          this._swal.swalProcessingRequest();
+          Swal.showLoading();
+          this._userService.updatePersonaInfo(this.profileForm.value, this.user!.uid)
+              .subscribe({
+                next: (resp:any) => {
+                  this._swal.swalSuccess('OK', resp.msg);
+                  const { name, email} = resp.userUpdated;
+                  this.user!.name = name;
+                  this.user!.email = email;
+                },
+                error: (error) => {
+                  console.log(error);
+                  this._catchError.scaleError('Something was wrong in updateUser', error);
+                }
+              });
+        }
+      });
+
     }
   }
 

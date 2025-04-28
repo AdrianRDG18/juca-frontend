@@ -23,7 +23,9 @@
     },
     "profilePage": {
         "title": "You can change your data information",
-        "subtitle": "Remember save your changes"
+        "subtitle": "Remember save your changes",
+        "updateUser": "Update user",
+        "confirmUpdate": "¿Do you really want to update this user?"
     },
     "sidebar": {
         "myProfile": "My Profile",

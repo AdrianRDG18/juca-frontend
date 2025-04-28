@@ -23,7 +23,9 @@
     },
     "profilePage": {
         "title": "Cambia algunos de tus datos aqui",
-        "subtitle": "Recuerda guardar tus cambios"
+        "subtitle": "Recuerda guardar tus cambios",
+        "updateUser": "Actualizar usuario",
+        "confirmUpdate": "¿Realmente quieres actualizar los datos de este usuario?"
     },
     "sidebar": {
         "myProfile": "Mi perfil",
