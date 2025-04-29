@@ -27,6 +27,13 @@
         "updateUser": "Update user",
         "confirmUpdate": "¿Do you really want to update this user?"
     },
+    "passwordPage": {
+        "title": "Password settings",
+        "subtitle": "Change you password",
+        "currentPW": "Current password",
+        "newPW": "New password",
+        "confirmationPW": "Password confirmation"
+    },
     "sidebar": {
         "myProfile": "My Profile",
         "logout": "Logout",
@@ -52,5 +59,10 @@
     },
     "routes": {
         "profile": "My profile"
+    },
+    "errors": {
+        "is-required": "is required",
+        "must-be": "must be at least",
+        "characters-long": "characters long"
     }
 }
