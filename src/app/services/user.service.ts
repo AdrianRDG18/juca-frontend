@@ -30,4 +30,8 @@ export class UserService {
     return this._httpClient.put(this.api_base_url + '/users/' + uid, user_info, this.tokenOnHeader);
   }
 
+  updatePassword(passwordconfig: any, uid: string){
+    return this._httpClient.put(this.api_base_url + '/users/update_password/' + uid, passwordconfig, this.tokenOnHeader);
+  }
+
 }

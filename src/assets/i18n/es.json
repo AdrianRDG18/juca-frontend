@@ -29,10 +29,11 @@
     },
     "passwordPage": {
         "title": "Ajustes de contraseña",
-        "subtitle": "Cambia tu contraseña",
+        "subtitle": "Cambiar contraseña",
         "currentPW": "Contraseña actual",
         "newPW": "Nueva contraseña",
-        "confirmationPW": "Confirmacion de contraseña"
+        "confirmationPW": "Confirmacion de contraseña",
+        "confirmationMessage": "¿Estas seguro de cambiar tu contraseña?"
     },
     "sidebar": {
         "myProfile": "Mi perfil",
@@ -50,7 +51,8 @@
         "email": "Correo electronico",
         "password": "Contraseña",
         "passwordConfirmation": "Confirmacion de contraseña",
-        "confirm": "Confirmar"
+        "confirm": "Confirmar",
+        "success": "Exito"
     },
     "no-page": {
         "page-not-found": "Pagina no encontrada",
@@ -65,6 +67,7 @@
         "must-be": "debe ser al menos de",
         "characters-long": "caracteres",
         "newPWNotMatchConfirm": "Debe coincidir con la confirmacion",
-        "confirmPWNoMatchNew": "Debe coincidir con contraseña nueva"
+        "confirmPWNoMatchNew": "Debe coincidir con contraseña nueva",
+        "somethingWrong": "Algo salio mal en"
     }
 }

@@ -29,10 +29,11 @@
     },
     "passwordPage": {
         "title": "Password settings",
-        "subtitle": "Change you password",
+        "subtitle": "Change password",
         "currentPW": "Current password",
         "newPW": "New password",
-        "confirmationPW": "Password confirmation"
+        "confirmationPW": "Password confirmation",
+        "confirmationMessage": "¿Are you sure to change your password?"
     },
     "sidebar": {
         "myProfile": "My Profile",
@@ -50,7 +51,8 @@
         "email": "Email",
         "password": "Password",
         "passwordConfirmation": "Confirm password",
-        "confirm": "Confirm"
+        "confirm": "Confirm",
+        "success": "Success"
     },
     "no-page": {
         "page-not-found": "Page not found",
@@ -65,6 +67,7 @@
         "must-be": "must be at least",
         "characters-long": "characters long",
         "newPWNotMatchConfirm": "Must be the same than password confirmation",
-        "confirmPWNoMatchNew": "Must be the same than new password"
+        "confirmPWNoMatchNew": "Must be the same than new password",
+        "somethingWrong": "Something was wrong in"
     }
 }
