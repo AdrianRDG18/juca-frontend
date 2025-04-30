@@ -63,6 +63,8 @@
     "errors": {
         "is-required": "es requerido",
         "must-be": "debe ser al menos de",
-        "characters-long": "caracteres"
+        "characters-long": "caracteres",
+        "newPWNotMatchConfirm": "Debe coincidir con la confirmacion",
+        "confirmPWNoMatchNew": "Debe coincidir con contraseña nueva"
     }
 }
