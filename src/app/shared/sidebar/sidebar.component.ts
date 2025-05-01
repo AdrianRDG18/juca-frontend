@@ -38,7 +38,7 @@ export class SidebarComponent {
   }
   
   logout(){
-    this._swal.swalConfirm(this._translateService.instant("headerComponent.logout"), this._translateService.instant("headerComponent.logoutMsg"))
+    this._swal.swalConfirm(this._translateService.instant("sidebar.logout"), this._translateService.instant("sidebar.logoutMsg"))
         .then( (resp) => {
           if(resp.isConfirmed){
             localStorage.removeItem('token');

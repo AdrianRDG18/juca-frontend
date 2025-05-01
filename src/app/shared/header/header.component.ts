@@ -51,7 +51,7 @@ export class HeaderComponent {
   }
 
   logout(){
-    this._swal.swalConfirm(this._translateService.instant("headerComponent.logout"), this._translateService.instant("headerComponent.logoutMsg"))
+    this._swal.swalConfirm(this._translateService.instant("sidebar.logout"), this._translateService.instant("sidebar.logoutMsg"))
         .then( (result) => {
           if(result.isConfirmed){
             localStorage.removeItem('token');

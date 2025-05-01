@@ -38,6 +38,7 @@
     "sidebar": {
         "myProfile": "Mi perfil",
         "logout": "Cerrar sesion",
+        "logoutMsg": "¿Estas seguro de cerrar sesion?",
         "personal-info": "Informacion personal",
         "password": "Contraseña",
         "settings": "Configuraciones"

@@ -38,6 +38,7 @@
     "sidebar": {
         "myProfile": "My Profile",
         "logout": "Logout",
+        "logoutMsg": "¿Are you sure to close session?",
         "personal-info": "Personal info",
         "password": "Password",
         "settings": "Settings"
