@@ -12,7 +12,8 @@ const routes: Routes = [
     children: [
       { path: '', component: DashboardComponent }, // without lazy load, main content for pages.component.html and /dashboard route
       { path: 'profile', loadChildren: () => import('./profile/profile.module').then( m => m.ProfileModule) },
-      { path: 'settings', loadChildren: () => import('./settings/settings.module').then( m => m.SettingsModule) }
+      { path: 'settings', loadChildren: () => import('./settings/settings.module').then( m => m.SettingsModule) },
+      { path: 'admin', loadChildren: () => import('./admin/admin.module').then( m => m.AdminModule) }
     ]
   }
 ];
