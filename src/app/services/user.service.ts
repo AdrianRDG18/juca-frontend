@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
 import { map, Observable } from 'rxjs';
 import { User } from '../models/user.model';
+import { Response, Users } from '../interfaces/users.response.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -32,6 +33,13 @@ export class UserService {
 
   updatePassword(passwordconfig: any, uid: string){
     return this._httpClient.put(this.api_base_url + '/users/update_password/' + uid, passwordconfig, this.tokenOnHeader);
+  }
+
+  getUsers(): Observable<Users>{
+    return this._httpClient.get<Response>(`${this.api_base_url}/users`, this.tokenOnHeader)
+               .pipe(
+                map( (resp: Response) => resp.users)
+               );
   }
 
 }
