@@ -32,13 +32,15 @@
 .mr-4{margin-right: 4rem;}
 .mr-5{margin-right: 5rem;}
 
+.td-img-table{ width: 35px; height: 35px; border-radius: 50%;}
+
 /* General /
 ****************************************************************************************
 */
 
 /* Header(open)
 *****************************************************************************************/
-.profile-pic{ width: 38px!important; }
+.profile-pic{ width: 38px!important; height: 38px; }
 .dropdown-user{ font-size: 14px; }
 .dropdown-user > li > a > i{ padding-right: 5px; }
 .topbar ul.dropdown-user li a { padding: 2px 15px; }
