@@ -9,6 +9,7 @@ import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { FooterComponent } from './footer/footer.component';
 import { RouterModule } from '@angular/router';
+import { TableImageComponent } from './table-image/table-image.component';
 
 @NgModule({
   declarations: [
@@ -17,13 +18,15 @@ import { RouterModule } from '@angular/router';
     BreadcrumbsComponent,
     SidebarComponent,
     FooterComponent,
+    TableImageComponent,
   ],
   exports: [
     LanguageSelectorComponent,
     HeaderComponent,
     BreadcrumbsComponent,
     SidebarComponent,
-    FooterComponent
+    FooterComponent,
+    TableImageComponent,
   ],
   imports: [
     CommonModule,

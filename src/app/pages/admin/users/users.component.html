@@ -21,7 +21,7 @@
                             @for (user of this.users(); track $index) {
                                 <tr>
                                     <td>{{$index+1}}</td>
-                                    <td>IMG</td>
+                                    <td> <app-table-image [image]="user.image"></app-table-image> </td>
                                     <td>{{user.name}}</td>
                                     <td>{{user.email}}</td>
                                     <td>{{user.status}}</td>
