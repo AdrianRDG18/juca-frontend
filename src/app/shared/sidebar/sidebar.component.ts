@@ -17,11 +17,12 @@ export class SidebarComponent {
   menu: any[] = [
     {
       title: 'Admin',
-      icon: 'mdi mdi-folder-lock-open',
+      icon: 'fa-solid fa-user-tie',
       role_required: 'ADMIN_ROLE',
       submenu: [
         {
           title: 'Users',
+          icon: 'fa-solid fa-users',
           route: 'users',
           role_required: 'ADMIN_ROLE'
         }

@@ -9,47 +9,60 @@
             <ul id="sidebarnav">
                 <li class="user-profile">
                     <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false">
-                        <img [src]="user!.image" alt="user" />
-                        <span class="hide-menu">{{ (user?.name)? (user?.name | slice:0:18)+'...':(user?.name) }}</span>
+                        <i class="side-icon fa-solid fa-user-tie"></i>
+                        <span class="hide-menu">{{ (user!.name!.length > 23)? (user?.name | slice:0:23)+'...':(user?.name) }}</span>
                     </a>
-                    <ul aria-expanded="false" class="collapse">
+                    <ul aria-expanded="false" class="collapse main-side-collapse">
                         <li>
                             <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false">
-                                <i class="mdi mdi-folder-lock-open"></i>
+                                <i class="fa fa-user"></i>
                                 <span class="hide-menu">
-                                    {{ "sidebar.myProfile" | translate }} <span class="label label-rouded label-themecolor pull-right text-dark">2</span>
+                                    {{ "sidebar.myProfile" | translate }} <span class="label label-rouded label-themecolor pull-right text-white">2</span>
                                 </span>
                             </a>
-                            <ul aria-expanded="false" class="collapse">
-                                <li>
-                                    <a routerLink="./profile/personal-info" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                            <ul aria-expanded="false" class="collapse child-side-collapse">
+                                <li class="child-li">
+                                    <i class="fa-solid fa-book"></i>
+                                    <a routerLink="./profile/personal-info" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="child-li-a">
                                        {{ "sidebar.personal-info" | translate }}
                                     </a>
                                 </li>
-                                <li>
-                                    <a routerLink="./profile/password" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                <li class="child-li">
+                                    <i class="fa-solid fa-key"></i>
+                                    <a routerLink="./profile/password" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="child-li-a">
                                        {{ "sidebar.password" | translate }}
                                     </a>
                                 </li>
                             </ul>
                         </li>
-                        <li><a routerLink="./settings" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">{{ "sidebar.settings" | translate}}</a></li>
-                        <li><a (click)="logout()" class="cursor-pointer">{{ "sidebar.logout" | translate }}</a></li>
+                        <li>
+                            <a routerLink="./settings" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                <i class="fa-solid fa-gear"></i>
+                                {{ "sidebar.settings" | translate}}
+                            </a>
+                        </li>
+                        <li>
+                            <a (click)="logout()" class="cursor-pointer">
+                                <i class="fa-solid fa-right-from-bracket"></i>
+                                {{ "sidebar.logout" | translate }}
+                            </a>
+                        </li>
                     </ul>
                 </li>
                 <li class="nav-devider"></li>
                 <li class="nav-small-cap">PERSONAL</li>
                 <li *ngFor="let option_menu of menu"> 
-                    <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"
+                    <a class="has-arrow waves-effect waves-white" href="#" aria-expanded="false"
                        *ngIf="option_menu.role_required === user?.role || user?.role === 'ADMIN_ROLE'">
-                        <i [class]="option_menu.icon"></i>
+                        <i class="side-icon" [class]="option_menu.icon"></i>
                         <span class="hide-menu"> {{ option_menu.title}} 
-                            <span class="label label-rouded label-themecolor pull-right text-dark">{{option_menu.submenu.length}}</span>
+                            <span class="label label-rouded label-themecolor pull-right text-white">{{option_menu.submenu.length}}</span>
                         </span>
                     </a>
                     <ul aria-expanded="false" class="collapse">
-                        <li *ngFor="let option_sub_menu of option_menu.submenu">
-                            <a [routerLink]="option_sub_menu.route" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+                        <li *ngFor="let option_sub_menu of option_menu.submenu" class="child-li">
+                            <i class="side-icon" [class]="option_sub_menu.icon"></i>
+                            <a class="child-li-a" [routerLink]="'/dashboard/admin/'+option_sub_menu.route" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
                                *ngIf="option_sub_menu.role_required === user?.role || user?.role === 'ADMIN_ROLE'">
                                {{option_sub_menu.title}}
                             </a>

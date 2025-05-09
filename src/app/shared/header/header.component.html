@@ -65,17 +65,17 @@
                                 <div class="dw-user-box">
                                     <div class="u-img"><img [src]="user!.image" alt="user"></div>
                                     <div class="u-text">
-                                        <h4>{{ (user?.name)? (user?.name | slice:0:18)+'...':(user?.name) }}</h4>
-                                        <p class="text-muted">{{ (user?.email)? (user?.email | slice:0:20)+'...':(user?.email) }}</p>
+                                        <h4>{{ (user?.name!.length > 18)? (user?.name | slice:0:18)+'...':(user?.name) }}</h4>
+                                        <p class="text-muted">{{ (user?.email!.length > 20)? (user?.email | slice:0:20)+'...':(user?.email) }}</p>
                                     </div>
                                 </div>
                             </li>
                             <li role="separator" class="divider"></li>
-                            <li><a routerLink="./profile"><i class="ti-user"></i>{{ "sidebar.myProfile" | translate  }}</a></li>
+                            <li><a routerLink="./profile/personal-info" routerLinkActive="active"><i class="fa fa-user"></i>{{ "sidebar.myProfile" | translate  }}</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a routerLink="account-settings" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><i class="ti-settings"></i>{{ "sidebar.settings" | translate }}</a></li>
+                            <li><a routerLink="./settings" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><i class="fa-solid fa-gear"></i>{{ "sidebar.settings" | translate }}</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a (click)="logout()" class="cursor-pointer"><i class="fa fa-power-off"></i> {{ "sidebar.logout" | translate }}</a></li>
+                            <li><a (click)="logout()" class="cursor-pointer"><i class="fa-solid fa-right-from-bracket"></i> {{ "sidebar.logout" | translate }}</a></li>
                         </ul>
                     </div>
                 </li>

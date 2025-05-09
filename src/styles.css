@@ -35,6 +35,30 @@
 /* General /
 ****************************************************************************************
 */
+
+/* Header(open)
+*****************************************************************************************/
+.profile-pic{ width: 38px!important; }
+.dropdown-user{ font-size: 14px; }
+.dropdown-user > li > a > i{ padding-right: 5px; }
+.topbar ul.dropdown-user li a { padding: 2px 15px; }
+.dropdown-menu > .dropdown-user > li >.active{ color: #004daa; }
+/* Header(close)
+*****************************************************************************************/
+
+/* Sidebar(open)
+**************************************************************************************** */
+.main-side-collapse{padding-left: 5px!important;}
+.child-side-collapse{padding-left: 25px!important;}
+
+.child-li{ display: flex; align-items: center;}
+.child-li-a{ padding-left: 8px!important; }
+
+.side-icon{ font-size: 15px!important; padding-bottom: 4px; }
+
+.sidebar-nav > ul > li > a .label { margin-top: 0px;}
+/* Sidebar(close)
+*****************************************************************************************/
 .fast{
     -webkit-animation-duration:0.3s;
     animation-duration:0.3s;
