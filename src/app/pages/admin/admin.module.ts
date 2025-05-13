@@ -5,6 +5,7 @@ import { AdminRoutingModule } from './admin-routing.module';
 
 import { UsersComponent } from './users/users.component';
 import { SharedModule } from '../../shared/shared.module';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { SharedModule } from '../../shared/shared.module';
   imports: [
     CommonModule,
     AdminRoutingModule,
-    SharedModule
+    SharedModule,
+    TranslateModule.forChild()
   ]
 })
 export class AdminModule { }

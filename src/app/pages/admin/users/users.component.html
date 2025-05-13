@@ -2,18 +2,18 @@
     <div class="col-12">
         <div class="card">
             <div class="card-body">
-                <h4 class="card-title">Users</h4>
-                <h6 class="card-subtitle">Users table</h6>
+                <h4 class="card-title">{{'usersPage.title' | translate}}</h4>
+                <h6 class="card-subtitle">{{'usersPage.subtitle' | translate}}</h6>
                 <div class="table-responsive">
                     <table class="table full-color-table full-inverse-table hover-table">
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Img</th>
-                                <th>Name</th>
-                                <th>email</th>
-                                <th>Status</th>
-                                <th>Role</th>
+                                <th>IMG</th>
+                                <th>{{'general.name' | translate}}</th>
+                                <th>{{'general.email' | translate}}</th>
+                                <th>{{'general.status' | translate}}</th>
+                                <th>{{'general.role' | translate}}</th>
                                 <th></th>
                             </tr>
                         </thead>
@@ -24,8 +24,17 @@
                                     <td> <app-table-image [image]="user.image"></app-table-image> </td>
                                     <td>{{user.name}}</td>
                                     <td>{{user.email}}</td>
-                                    <td>{{user.status}}</td>
-                                    <td>{{user.role}}</td>
+                                    <td>
+                                      <span class="badge text-bold"
+                                            [class]="{'bg-success': user.status == 'ACTIVE', 'bg-warning': user.status == 'INACTIVE'}">
+                                        {{user.status}}
+                                      </span>
+                                    </td>
+                                    <td>
+                                      <span class="badge text-bold" [class]="{'bg-dark': user.role == 'ADMIN_ROLE', 'bg-secondary': user.role == 'USER_ROLE'}">
+                                        {{user.role}}
+                                      </span>
+                                    </td>
                                     <td><button class="btn btn primary">X</button></td>
                                 </tr>
                             }

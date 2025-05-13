@@ -27,6 +27,10 @@
         "updateUser": "Actualizar usuario",
         "confirmUpdate": "¿Realmente quieres actualizar los datos de este usuario?"
     },
+    "usersPage": {
+      "title": "Usuarios",
+      "subtitle": "Tabla de usuarios"
+    },
     "passwordPage": {
         "title": "Ajustes de contraseña",
         "subtitle": "Cambiar contraseña",
@@ -53,7 +57,9 @@
         "password": "Contraseña",
         "passwordConfirmation": "Confirmacion de contraseña",
         "confirm": "Confirmar",
-        "success": "Exito"
+        "success": "Exito",
+        "status": "Estatus",
+        "role": "Rol"
     },
     "no-page": {
         "page-not-found": "Pagina no encontrada",
