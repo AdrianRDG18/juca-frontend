@@ -59,7 +59,11 @@
         "confirm": "Confirm",
         "success": "Success",
         "status": "Status",
-        "role": "Role"
+        "role": "Role",
+        "options": "Options",
+        "edit": "Edit",
+        "disable": "Disable",
+        "delete": "Delete"
     },
     "no-page": {
         "page-not-found": "Page not found",
