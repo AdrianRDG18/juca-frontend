@@ -29,7 +29,9 @@
     },
     "usersPage": {
       "title": "Users",
-      "subtitle": "Users table"
+      "subtitle": "Users table",
+      "titleUpdate": "Update user",
+      "messageUpdate": "Are you sure to update this user?"
     },
     "passwordPage": {
         "title": "Password settings",

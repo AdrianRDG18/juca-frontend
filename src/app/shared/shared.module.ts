@@ -10,6 +10,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { FooterComponent } from './footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { TableImageComponent } from './table-image/table-image.component';
+import { EditUserComponent } from './modals/edit-user/edit-user.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { TableImageComponent } from './table-image/table-image.component';
     SidebarComponent,
     FooterComponent,
     TableImageComponent,
+    EditUserComponent
   ],
   exports: [
     LanguageSelectorComponent,
@@ -27,6 +29,7 @@ import { TableImageComponent } from './table-image/table-image.component';
     SidebarComponent,
     FooterComponent,
     TableImageComponent,
+    EditUserComponent
   ],
   imports: [
     CommonModule,

@@ -41,7 +41,10 @@
                                             {{'general.options' | translate}}
                                         </button>
                                         <div class="dropdown-menu">
-                                            <a class="dropdown-item cursor-pointer">{{'general.edit' | translate}}</a>
+                                            <a (click)="setUserToEdit(user)" data-toggle="modal" data-target=".bs-example-modal-lg"
+                                               class="dropdown-item cursor-pointer">
+                                              {{'general.edit' | translate}}
+                                            </a>
                                             <a class="dropdown-item cursor-pointer">{{'general.disable' | translate}}</a>
                                             <a class="dropdown-item cursor-pointer text-danger">{{'general.delete' | translate}}</a>
                                         </div>
@@ -56,3 +59,11 @@
         </div>
     </div>
 </div>
+
+@if(displayModal){
+  <app-edit-user #editUserModalRef
+    [user]="userEdit"
+    (close)="closeModal()"
+    (update)="updateUser($event)"
+  ></app-edit-user>
+}

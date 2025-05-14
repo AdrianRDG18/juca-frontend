@@ -29,7 +29,9 @@
     },
     "usersPage": {
       "title": "Usuarios",
-      "subtitle": "Tabla de usuarios"
+      "subtitle": "Tabla de usuarios",
+      "titleUpdate": "Actualizar usuario",
+      "messageUpdate": "¿Estas seguro de actualizar este usuario?"
     },
     "passwordPage": {
         "title": "Ajustes de contraseña",

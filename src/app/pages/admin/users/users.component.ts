@@ -1,11 +1,12 @@
-import { Component, signal } from '@angular/core';
+import { User } from './../../../models/user.model';
+import { Component, signal, ViewChild } from '@angular/core';
 import { UserService } from '../../../services/user.service';
 import { SweetAlertService } from '../../../services/swal.service';
 import Swal from 'sweetalert2';
 import { CatchErrorService } from '../../../services/catch-error.service';
 import { TranslateService } from '@ngx-translate/core';
-import { User } from '../../../models/user.model';
 import { Users } from '../../../interfaces/users.response.interface';
+import { EditUserComponent } from '../../../shared/modals/edit-user/edit-user.component';
 
 @Component({
   selector: 'app-users',
@@ -15,6 +16,9 @@ import { Users } from '../../../interfaces/users.response.interface';
 export class UsersComponent {
 
   users = signal<User[]>([]);
+  userEdit: User | null = null;
+  displayModal: boolean = false;
+  @ViewChild('editUserModalRef') editUserComponent!: EditUserComponent; //Ref of editUserComponent by #editUserModalRef in the <app-edit-user>
 
   constructor(private userService: UserService,
               private swalService: SweetAlertService,
@@ -37,4 +41,27 @@ export class UsersComponent {
         });
   }
 
+  setUserToEdit(user: User){
+    this.displayModal = true;
+    this.userEdit = user;
+  }
+
+  updateUser(user: User){
+    this.swalService.swalConfirm(this.translateService.instant('usersPage.titleUpdate'), this.translateService.instant('usersPage.messageUpdate'))
+        .then((resp) => {
+          if(resp.isConfirmed){
+            this.editUserComponent.closeModalAfterRequest();
+            this.closeModal();
+          }
+        });
+  }
+
+  closeModal(){
+    setTimeout(()=>{
+      this.displayModal = false;
+      this.userEdit = null;
+    }, 100)
+  }
+
 }
+
