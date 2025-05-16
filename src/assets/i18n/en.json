@@ -31,7 +31,12 @@
       "title": "Users",
       "subtitle": "Users table",
       "titleUpdate": "Update user",
-      "messageUpdate": "Are you sure to update this user?"
+      "subtitleModalEdit": "Update user name, email, status or role of this user",
+      "messageUpdate": "Are you sure to update this user?",
+      "userRole": "User",
+      "adminRole": "Administrator",
+      "statusActive": "Active",
+      "statusInactive": "Inactive"
     },
     "passwordPage": {
         "title": "Password settings",

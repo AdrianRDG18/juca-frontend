@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { LanguageSelectorComponent } from './language-selector/language-selector.component';
 import { HeaderComponent } from './header/header.component';
@@ -35,6 +35,7 @@ import { EditUserComponent } from './modals/edit-user/edit-user.component';
     CommonModule,
     FormsModule,
     RouterModule,
+    ReactiveFormsModule,
     TranslateModule.forChild()
   ]
 })

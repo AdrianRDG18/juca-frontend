@@ -31,7 +31,12 @@
       "title": "Usuarios",
       "subtitle": "Tabla de usuarios",
       "titleUpdate": "Actualizar usuario",
-      "messageUpdate": "¿Estas seguro de actualizar este usuario?"
+      "subtitleModalEdit": "Puedes actualizar el nombre, correo electronico, estatus o rol de este usuario",
+      "messageUpdate": "¿Estas seguro de actualizar este usuario?",
+      "userRole": "Usuario",
+      "adminRole": "Administrador",
+      "statusActive": "Activo",
+      "statusInactive": "Inactivo"
     },
     "passwordPage": {
         "title": "Ajustes de contraseña",

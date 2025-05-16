@@ -49,9 +49,20 @@ export class UsersComponent {
   updateUser(user: User){
     this.swalService.swalConfirm(this.translateService.instant('usersPage.titleUpdate'), this.translateService.instant('usersPage.messageUpdate'))
         .then((resp) => {
+          this.swalService.swalProcessingRequest();
+          Swal.showLoading();
           if(resp.isConfirmed){
-            this.editUserComponent.closeModalAfterRequest();
-            this.closeModal();
+            this.userService.updatePersonaInfo(user, user.uid)
+                .subscribe({
+                  error: (error) => {
+                    console.log(error);
+                    this.catchError.scaleError(this.translateService.instant('errors.somethingWrong') + ' updateUser', error);
+                  }, complete: () => {
+                    this.editUserComponent.closeModalAfterRequest();
+                    this.closeModal();
+                    this.getUsers();
+                  }
+                });
           }
         });
   }

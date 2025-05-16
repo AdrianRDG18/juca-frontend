@@ -2,13 +2,72 @@
   <div class="modal-dialog modal-lg">
       <div class="modal-content">
           <div class="modal-header">
-              <h4 class="modal-title" id="myLargeModalLabel">Large modal</h4>
+              <h4 class="modal-title" id="myLargeModalLabel">{{'usersPage.titleUpdate' | translate}}</h4>
               <button #closeUserEditModal type="button" class="close" data-dismiss="modal" aria-hidden="true" (click)="closeModal()">×</button>
           </div>
           <div class="modal-body">
-              <h4>{{user?.name}}</h4>
-              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-              <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+
+            <div class="card">
+              <div class="card-body">
+                <h6 class="card-subtitle">{{'usersPage.subtitleModalEdit' | translate}}</h6>
+
+                <form [formGroup]="editUserForm" class="form p-t-20">
+
+                  <div class="form-group">
+                    <label for="inputName">{{'general.name' | translate}}</label>
+                    <div class="input-group">
+                        <div class="input-group-addon"><i class="ti-user"></i></div>
+                        <input type="text" class="form-control" id="inputName" formControlName="name" placeholder="{{'general.name' | translate}}" autocomplete="off">
+                      </div>
+                      <div *ngFor="let error of getControlErrors('name', 'Name')">
+                        <small class="text-danger">{{error}}</small>
+                      </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="inputEmail">{{'general.email' | translate}}</label>
+                    <div class="input-group">
+                        <div class="input-group-addon"><i class="ti-email"></i></div>
+                        <input type="email" class="form-control" id="inputEmail" formControlName="email" placeholder="{{'general.email' | translate}}" autocomplete="off">
+                      </div>
+                      <div *ngFor="let error of getControlErrors('email', 'Email')">
+                        <small class="text-danger">{{error}}</small>
+                      </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="inputRole">{{'general.role' | translate}}</label>
+                    <div class="input-group">
+                        <div class="input-group-addon"><i class="ti-headphone-alt"></i></div>
+                        <select class="form-control custom-select" id="inputRole" formControlName="role">
+                          <option value="USER_ROLE">{{'usersPage.userRole' | translate}}</option>
+                          <option value="ADMIN_ROLE">{{'usersPage.adminRole' | translate}}</option>
+                        </select>
+                      </div>
+                      <div *ngFor="let error of getControlErrors('role', 'Role')">
+                        <small class="text-danger">{{error}}</small>
+                      </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="inputStatus">{{'general.status' | translate}}</label>
+                    <div class="input-group">
+                        <div class="input-group-addon"><i class="ti-panel"></i></div>
+                        <select class="form-control custom-select" id="inputStatus" formControlName="status">
+                          <option value="ACTIVE">{{'usersPage.statusActive' | translate}}</option>
+                          <option value="INACTIVE">{{'usersPage.statusInactive' | translate}}</option>
+                        </select>
+                      </div>
+                      <div *ngFor="let error of getControlErrors('status', 'Status')">
+                        <small class="text-danger">{{error}}</small>
+                      </div>
+                  </div>
+
+                </form>
+
+              </div>
+            </div>
+
           </div>
           <div class="modal-footer">
               <button type="button" class="btn btn-secondary waves-effect text-left" data-dismiss="modal" (click)="closeModal()">Close</button>
